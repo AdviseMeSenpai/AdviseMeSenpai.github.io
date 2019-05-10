@@ -1,0 +1,208 @@
+
+h1
+{
+	position: relative;
+	left : 5%;
+	font-family: 'Aileron', Arial;
+	font-size: 3em;
+	color: #AA4069;
+	-webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: brown;
+}
+
+.milieu
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding-bottom: 10px;
+}
+
+.texteAccueil
+{
+	font-family: Arial;
+	justify-content: center;
+	color: #e65c00;
+	font-size:1.8em;
+	font-weight: bold;
+	-webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+#scoreInput
+{
+	margin-left: 10px;
+	width: 40px;
+}
+
+.smallTexteAccueil
+{
+	font-family: Arial;
+	font-size: 1.2em;
+	font-weight: bold;
+
+}
+
+#accueil
+{
+	display: block;
+}
+
+#loading
+{
+	display: none;
+	
+}
+
+#page1
+{
+	display: none;
+	flex-direction: column;
+	align-items: center;
+}
+
+#loader
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+    align-items: center;
+    height: 300px;
+}
+#loadingText
+{	
+	font-family: 'Aileron', Arial;
+	font-size: 3em;
+	color: orange;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+#loadingGif
+{
+	border: 16px solid black;
+    border-radius: 50%;
+  	border-top: 16px solid #3498db;
+  	width: 70px;
+  	height: 70px;
+  	-webkit-animation: spin 2s linear infinite; /* Safari */
+  	animation: spin 2s linear infinite;
+}
+
+#page1-flex
+{
+	display: flex;
+	border-style: solid;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.images
+{
+	width: 200px;
+	height: 300px;
+	border-style: solid;
+	border-width: 2px;
+	margin: 20px;
+}
+
+.page1Text
+{
+	font-size: 2em;
+	color: #e65c00;
+	-webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.animeDisplay
+{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 300px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.animeText
+{
+	font-weight: bold;
+	font-family: 'Arial';
+	font-size: 1.5em;
+	color: orange;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.inputText
+{
+	width:50%;
+	height: 30px;
+	font-size: 1.2em;
+	padding-left: 27px;
+	color: #4d4d4d;
+	border: 2px #868686 solid ;
+	background-image: url('search.png');
+	background-position: 5px 9px;
+	background-repeat: no-repeat;
+	background-size: 20px, 20px;
+	-webkit-transition: 0.5s;
+
+}
+
+.button
+{
+	display: inline-block;
+	padding: 10px 15px;
+	color: white;
+	background-color: #4d004d;
+    font-size: 16px;
+    box-shadow: 0 2px #999;
+    margin-left: 10px;
+
+}
+.button:hover
+{
+	background-color: #1a001a;
+}
+
+.button:active
+{	
+	background-color: #1a001a;
+	box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+#nameInput:focus
+{
+	background-image: none;
+	border: 2px #00cccc solid #555;
+
+}
+
+body
+{
+	background: url(Background-clair.png);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@font-face { /* Définition d'une nouvelle police nommée CAC Champagne */
+    font-family: 'Aileron';
+    src: url('Aileron-Regular-webfont.eot');
+    src: url('Aileron-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-Regular-webfont.woff') format('woff'),
+         url('Aileron-Regular-webfont.ttf') format('truetype'),
+         url('Aileron-Regular-webfont.svg#cac_champagneregular') format('svg');
+}
+

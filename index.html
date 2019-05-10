@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="scriptFile.js"></script>
+        <title>Suggest-me-senpai</title>
+    </head>
+
+    <body>
+    	<header>
+    		<h1>What should I watch Senpai?</h1>
+    	</header>
+    	
+        
+        <form id ="accueil">
+        	<div class="milieu" id="texteAccueil"><span class="texteAccueil"> Please write your Anilist username</span></div>
+        	<div class="milieu"> <input class="inputText" id="userInput" type="text" name="pseudo" placeholder="Username..." /> </div>
+        	<div class="milieu" ><span class="texteAccueil"> Please write your senpai's Anilist username</span></div>
+        	<div class="milieu"> <input class="inputText" id="adviserInput" type="text" name="pseudo" placeholder="Username..." /> </div>
+            <div class="milieu"> <span class="smallTexteAccueil"> Choose minimum score to consider </span> <input id="scoreInput" type="number" name="quantity" min="1" max="10" value="8"> </div>
+        	<div class="milieu"> <input id="okButton" type="button" class="button" value="Tell me senpai" onclick="getUserList()"/> </div>
+            <div class="milieu" id="texteAccueil"><span class="texteAccueil"> If you have no senpai i'll be your senpai (just fill your user list)</span></div>
+
+        </form>
+
+        <form id="loading">
+        	<div id="loader">
+        	<div id="loadingText"> now loading ... </div> 
+        	<div id="loadingGif"> </div>
+        	</div>
+        </form>
+
+        <form id = "page1">
+        	<div class="page1Text"> Anime suggested based on your best Genres : </div>
+        	<div  id="page1-flex">
+        		<div class ="animeDisplay">
+                    <a class="animeLink" href="https://anilist.co/anime/14719">
+        			<div><img class="images" src="NoSuggestion.jpg" alt="You Shouldn't see this"></div>
+                    </a>
+        	    </div>
+
+        	    <div class ="animeDisplay">
+                    <a class="animeLink" href="https://anilist.co/anime/14719">
+        		<div><img class="images" src="NoSuggestion.jpg" alt="You Shouldn't see this"></div>
+                    </a>
+        		</div>
+        		<!-- max line length 19 characters -->
+        		<div class ="animeDisplay">
+                    <a class="animeLink" href="https://anilist.co/anime/14719">
+        		<div><img class="images" src="NoSuggestion.jpg" alt="You Shouldn't see this"></div>
+                    </a>
+        		</div>
+        	</div>
+        	<div class="page1Text"> Other anime you may like </div>
+        	<div  id="page1-flex">
+        		<div class ="animeDisplay">
+                    <a class="animeLink" href="https://anilist.co/anime/14719">
+        			     <div><img class="images" src="NoSuggestion.jpg" alt="You Shouldn't see this"></div>
+                    </a>
+        	    </div>
+
+        	    <div class ="animeDisplay">
+                    <a class="animeLink" href="https://anilist.co/anime/14719">
+        		<div><img class="images" src="NoSuggestion.jpg" alt="You Shouldn't see this"></div>
+                    </a>
+        		</div>
+        		<!-- max line length 19 characters -->
+        		<div class ="animeDisplay">
+                    <a class="animeLink" href="https://anilist.co/anime/14719">
+        		<div><img class="images" src="NoSuggestion.jpg" alt="You Shouldn't see this"></div>
+                    </a>
+        		</div>
+        	</div>
+        </form>
+
+    </body>
+</html>
