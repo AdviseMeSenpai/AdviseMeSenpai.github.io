@@ -137,6 +137,7 @@ function displayAdvise(){
 	var animeDisplayContainers = document.getElementsByClassName("animeDisplay"); // contains the image/text
 	var animeImagesContainers = document.getElementsByClassName("images"); 
 	var animeLinksContainers = document.getElementsByClassName("animeLink");
+	console.log("Started");
 
 	
 
