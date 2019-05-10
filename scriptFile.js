@@ -8,6 +8,7 @@ var sequelsIDs = []; //memoization
 var minimumScore = 8; // minimum score to be advised from in the adviser list
 var bestGenres = []; //maps the best genres of the user
 var parsedLists = 0;
+var errorBool = false;
 
 function getUserList(username){
 	var adviserUserName = document.getElementById("adviserInput").value;
@@ -21,7 +22,7 @@ function getUserList(username){
 	}
 
 	minimumScore = document.getElementById("scoreInput").value;
-	
+
 	document.getElementById('accueil').style.display = "none";
 	document.getElementById('loading').style.display = "block";
 	
@@ -241,6 +242,7 @@ function handleResponse(response) {
 function handleError(error) {
 	console.log('Error, check console ');
 	alert("Error, probably wrong input, please Retry");
+	errorBool = true;
 	document.getElementById('accueil').style.display = "block";
 	document.getElementById('loading').style.display = "none";
 	document.getElementById('page1').style.display = "none";
@@ -277,15 +279,17 @@ function parseUserList(data){
 		bestGenres.push(k);
 	}
 	parsedLists++;
-	if (parsedLists >= 2){
-		displayAdvise();
-	}
 }
 
 function parseAdviserList(data) {
 	//console.log(data); //data contains the adviser's list
 	for (var i = 0; i<data.data.MediaListCollection.lists[0].entries.length; i++){
 		adviserList.push(data.data.MediaListCollection.lists[0].entries[i].media.id);
+	}
+
+	while(parsedLists < 1){
+		if (errorBool)
+			return;
 	}
 
 	for (var k=0; k<data.data.MediaListCollection.lists[0].entries.length; k++){
